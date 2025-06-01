@@ -22,12 +22,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/user/register",
+					"raw": "http://localhost:8787/api/user/register",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "8787",
 					"path": [
 						"api",
 						"user",
@@ -52,12 +52,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/user/login",
+					"raw": "http://localhost:8787/api/user/login",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "8787",
 					"path": [
 						"api",
 						"user",
@@ -95,12 +95,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/admin/add-train",
+					"raw": "http://localhost:8787/api/admin/add-train",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "8787",
 					"path": [
 						"api",
 						"admin",
@@ -132,12 +132,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/admin/add-train",
+					"raw": "http://localhost:8787/api/admin/add-train",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "8787",
 					"path": [
 						"api",
 						"admin",
@@ -172,12 +172,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/train/seat-availability?source=Patan&destination=Palanpur",
+					"raw": "http://localhost:8787/api/train/seat-availability?source=Patan&destination=Palanpur",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "8787",
 					"path": [
 						"api",
 						"train",
@@ -218,12 +218,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/train-info/book-seats",
+					"raw": "http://localhost:8787/api/train-info/book-seats",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "8787",
 					"path": [
 						"api",
 						"train-info",
@@ -257,12 +257,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/train-info/get-booking-details",
+					"raw": "http://localhost:8787/api/train-info/get-booking-details",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "8787",
 					"path": [
 						"api",
 						"train-info",
@@ -300,12 +300,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/admin/update-capacity",
+					"raw": "http://localhost:8787/api/admin/update-capacity",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "8787",
 					"path": [
 						"api",
 						"admin",
