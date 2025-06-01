@@ -1,0 +1,319 @@
+{
+	"info": {
+		"_postman_id": "e1e082ce-041b-4844-b33a-9bda4b803285",
+		"name": "Book_My_Train",
+		"description": "This collection contains testing of all API endpoints built as a part of Book_My_Train project.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40947288"
+	},
+	"item": [
+		{
+			"name": "checkRegister",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"user2@test.com\",\n    \"password\": \"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"user2@test.com\",\n    \"password\": \"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkAdminAddTrain",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczODE5NjUxMCwiZXhwIjoxNzM4MjAwMTEwfQ.B1t8-aXBjuwLysyepgjRtWrGqec4wjljJ1r7f4bW28A",
+						"description": "JWT Token",
+						"type": "text"
+					},
+					{
+						"key": "x-api-key",
+						"value": "|_$%Tvfrfg@_2025329489347DFREGR!@123\\$$%ajko`!!",
+						"description": "Admin API Key",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Bullet Express\", \n    \"date\" : \"2025-02-09\", \n    \"time\" : \"05:15:00\", \n    \"source_station_id\" : 1, \n    \"dest_station_id\" : 4, \n    \"capacity\" : 2\n}\n\n// {\n//     \"email\": \"admin@test.in\",\n//     \"password\": \"password\"\n// }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/admin/add-train",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"admin",
+						"add-train"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkUserAddTrain",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzM4MTk2NjI0LCJleHAiOjE3MzgyMDAyMjR9.y30nN_m78k6nvw6Ie2qzJH6yzyNP7nX3LYNa80ZZRUM",
+						"description": "JWT Token",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\n//     \"email\" : \"user@test.com\",\n//     \"password\" : \"123\"\n// }\n\n{\n    \"name\" : \"Test Express\", \n    \"date\" : \"2025-04-30\", \n    \"time\" : \"12:00:00\", \n    \"source_station_id\" : 1, \n    \"dest_station_id\" : 2, \n    \"capacity\" : 200\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/admin/add-train",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"admin",
+						"add-train"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSeatAvailability",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzM4MTk2ODUyLCJleHAiOjE3MzgyMDA0NTJ9.Xx37S7cuQADfLFUPtc5HAstegG3aclftPS2-Wq7r1uQ",
+						"description": "JWT Token",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/train/seat-availability?source=Patan&destination=Palanpur",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"train",
+						"seat-availability"
+					],
+					"query": [
+						{
+							"key": "source",
+							"value": "Patan"
+						},
+						{
+							"key": "destination",
+							"value": "Palanpur"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bookSeat",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzM4MTk3Njc5LCJleHAiOjE3MzgyMDEyNzl9.QR8bAAAcXOoyWKGcm6PSatyYmfKT3fB-h53nkz0gdhc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\n//     \"email\": \"user2@test.com\",\n//     \"password\": \"123\"\n// }\n{\n    \"trainId\": \"1\",\n    \"quantity\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/train-info/book-seats",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"train-info",
+						"book-seats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBookingDetails",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzM4MjAwNTUzLCJleHAiOjE3MzgyMDQxNTN9.vixIHWXNPCpKuO_eAFh5IfAb2h795CfYPc-nTUA8abY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"user2@test.com\",\n    \"password\": \"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/train-info/get-booking-details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"train-info",
+						"get-booking-details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateTrainCapacity",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsInJvbGUiOiJhZG1pbiIsImlhdCI6MTczODIwMTIwMCwiZXhwIjoxNzM4MjA0ODAwfQ.oa46qQtjsypwqQyKfZmkoQl_kU5-vxspYHOvdn-tcP0",
+						"description": "JWT Token",
+						"type": "text"
+					},
+					{
+						"key": "x-api-key",
+						"value": "|_$%Tvfrfg@_2025329489347DFREGR!@123\\$$%ajko`!!",
+						"description": "ADMIN API KEY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\n//     \"email\": \"admin@test.in\",\n//     \"password\": \"password\"\n// }\n\n{\n    \"trainId\" : 7,\n    \"newCapacity\" : 500\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/admin/update-capacity",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"admin",
+						"update-capacity"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
